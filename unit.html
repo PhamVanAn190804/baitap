@@ -1,0 +1,109 @@
+<html>
+<head>
+     <title>TO-DO LIST</title>
+     <meta charset="UTF-8">
+      <meta htpp-equiv="Content-type" content="text/html;charset=UTF-8">
+     <meta name="viewport" content="width = device-width,initial-sacle=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+     <style type="text/css">
+     body{
+       background: #0055ff;
+       font-family: sans-serif;
+        }
+     div.root{
+       color: white;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 40%;
+          }
+     div.root>*{
+       margin: 15px auto;
+       text-align: center;
+          }
+     .root>.header{
+       font-size: 30px;
+         }
+     .root>.list{
+      width: 50%;
+      background-color: white;
+      color: black;
+      padding: 20px 10px 50px;
+      list-style-type: none;
+        }
+     .root>.list > li{
+        border-bottom: 1px solid black;
+        padding: 5px;
+        margin-bottom: 10px;
+        text-align:left;
+        }
+      .list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }  
+        
+
+     </style> 
+
+
+</head>  
+
+<body>
+  <div class="root">
+    <p class="header">TO-DO LIST</p>
+      <form>
+       <input type="text" id="nhapdulieu" placeholder="what you want to do">
+       <button type="button" id="thaotac">ADD</button>
+      </form>
+    
+    <ul class="list" style="border-radius: 4px;" >
+        <li>
+          <p>buy some stuff</p>
+          <i class="fa-solid fa-trash"></i>
+        </li>
+        <li>
+               <p>cook a dish</p>
+               <i class="fa-solid fa-trash"></i>
+        </li>
+        <li>
+          <p>read a book</p>
+          <i class="fa-solid fa-trash"></i>
+        </li>
+        <li>
+          <p>Play a game</p>
+          <i class="fa-solid fa-trash"></i>
+        </li>
+    </ul>
+  </div>
+  <script>
+     // thêm phần tử
+    let addBtn = document.getElementById('thaotac');
+    let addInput = document.getElementById('nhapdulieu');
+    let listElem = document.querySelector('.list');
+    
+    addBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (addInput.value === '') return;//nếu ô nhập k có j thì kết thúc
+        
+        listElem.insertAdjacentHTML('beforeend', createItem(addInput.value));
+        addInput.value = '';
+    });
+    
+    function createItem(text) {
+        return '<li><p>' + text + '</p><i class="fa-solid fa-trash"></i></li>';//in phần tử
+
+    }
+      // xóa phần tử
+    listElem.addEventListener('click', (event) => {
+        event.preventDefault();
+        let target = event.target;
+        if (target.classList.contains('fa-trash')) {
+            target.parentNode.remove();
+        }
+    });
+    
+  </script>
+</body>
+</html>

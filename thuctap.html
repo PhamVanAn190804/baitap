@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Baitap 2</title> 
+     <meta charset="UTF-8">
+       <meta 
+        htpp-equiv="Content-type"
+        content="text/html;charset=UTF-8">
+     <meta name="viewport" content="width = device-width,initial-sacle=1">
+     <style type="text/css">
+      
+      body {
+          background: rgba(76, 76, 136, 0.471);
+          font-family: sans-serif;   
+          }
+
+          .root {
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+          }
+
+      p.arc {
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         background-color: rgba(100, 156, 164, 0.662);
+         border:1px solid white;
+         
+         }   
+
+      p.Si {
+         text-align: center;
+         font-size: 50px;
+         font-weight: bolder;
+          color:white;   
+         } 
+
+      p.Si::after {
+         content: '\09\2014\2014\2014\09';
+          font-weight: 1;
+          }
+      p.Si::before {
+         content: '\09\2014\2014\2014\09';
+          font-weight: 1;
+          } 
+      #dien1{
+         width: 500px;
+      }
+      #dien2{
+         width: 500px;
+      }
+     
+      form {
+         background-size: 50%;
+         text-align:center;   
+      }
+      
+      .checkbox-container{
+         display: flex;
+         color: white;
+      }
+
+      #checkbox-container input[type="checkbox"]{
+        margin-right: 5px;
+       
+      }
+      div > word {
+         color:white;
+      }
+      
+      button, input[type=submit] { 
+         float: center;
+         background-color: violet;
+         width: 100%;
+         height: 36px;
+         color: white;
+      
+      } 
+      
+      div clinch {
+        color: red;
+      }
+
+      div bull {
+         
+         text-decoration: underline;
+      }
+     </style>
+</head>
+<body>
+ <div class="root">
+   <div>
+    <div style="display: flex;
+    justify-content: center;
+    align-items: center;">
+        <p class="arc"></p>
+    </div>
+    <p class="Si">Sign in</p>
+ 
+    <form action="https://support.google.com/mail/answer/8494?hl=vi&co=GENIE.Platform%3DDesktop">
+      <input type="email" id="dien1" placeholder="Email" required><br></br>
+      </form>
+      <from>
+      <input type="password" id="dien2" placeholder="Password" required>
+      <div style="display: flex;justify-content: space-between;">
+        <div class="checkbox-container">
+          <input type="checkbox" id="mycheckbox">
+          <span>Remember me</span>
+        </div>
+        <a href="" style="color: white;">Forgot password?</a>  
+      </div> 
+	  <input type="submit" value="Log in">
+    </form>
+ 
+    <div style="display: flex;justify-content: space-around;align-items: center;">
+          <p style="color: blue;">Not registred?</p>
+          <a href="https://support.google.com/mail/answer/56256?hl=vi" style="color :white;">Create an account!</a>  
+    </div>
+   </div>
+ </div>   
+ <script>
+
+
+ </script>
+ 
+
+</body>
+</html>
